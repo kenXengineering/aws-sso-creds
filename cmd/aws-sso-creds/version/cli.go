@@ -2,6 +2,7 @@ package version
 
 import (
 	"fmt"
+	"github.com/go-git/go-git/v5"
 	"os"
 
 	"github.com/go-git/go-git/v5/plumbing"
@@ -25,12 +26,16 @@ func Command() *cobra.Command {
 				if err != nil {
 					return fmt.Errorf("error obtaining working directory: %w", err)
 				}
-				version, err := gitversion.GetLanguageVersions(workingDir, plumbing.Revision(commitish))
+				repo, err := git.PlainOpen(workingDir)
+				if err != nil {
+					return fmt.Errorf("error opening working directory: %w", err)
+				}
+				vrs, err := gitversion.GetLanguageVersions(repo, plumbing.Revision(commitish), false, "", false)
 				if err != nil {
 					return fmt.Errorf("error calculating version: %w", err)
 				}
 
-				v = version.SemVer
+				v = vrs.SemVer
 			}
 			fmt.Println(v)
 			return nil
