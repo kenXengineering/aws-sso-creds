@@ -68,7 +68,7 @@ func GetCachePath() string {
 }
 
 func GetCache(profile string) (*config.JSON, error) {
-	if CacheFileExists(profile) {
+	if Exists(profile) {
 		cacheFile, err := os.Open(GetCacheFilePath(profile))
 		if err != nil {
 			return &config.JSON{}, err
@@ -84,7 +84,7 @@ func GetCache(profile string) (*config.JSON, error) {
 }
 
 func SetCache(profile string, data *config.JSON) error {
-	if !CacheFileExists(profile) {
+	if !Exists(profile) {
 		if err := os.MkdirAll(GetCachePath(), 0700); err != nil {
 			return err
 		}
@@ -100,7 +100,7 @@ func SetCache(profile string, data *config.JSON) error {
 	return nil
 }
 
-func CacheFileExists(profile string) bool {
+func Exists(profile string) bool {
 	if _, err := os.Stat(GetCacheFilePath(profile)); err != nil {
 		return false
 	}
