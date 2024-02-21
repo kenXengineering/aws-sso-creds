@@ -40,6 +40,8 @@ func configureCLI() *cobra.Command {
 
 	rootCommand.PersistentFlags().StringVarP(&profile, "profile", "p", "", "the AWS profile to use")
 	rootCommand.PersistentFlags().StringVarP(&homeDir, "home-directory", "H", homeDir, "specify a path to a home directory")
+	rootCommand.PersistentFlags().Bool("cache", true, "cache credentials.  System will update credentials if they are expired")
+	rootCommand.PersistentFlags().Bool("refresh-cache", false, "retrieves new credentials and updates the cache with them")
 	if err := viper.BindEnv("profile", "AWS_PROFILE"); err != nil {
 		panic(err)
 	}

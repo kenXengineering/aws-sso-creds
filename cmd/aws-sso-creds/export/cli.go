@@ -2,10 +2,8 @@ package export
 
 import (
 	"fmt"
-
-	"github.com/jaxxstorm/aws-sso-creds/pkg/credentials"
+	"github.com/jaxxstorm/aws-sso-creds/pkg/cache"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 )
 
 func Command() *cobra.Command {
@@ -18,18 +16,14 @@ func Command() *cobra.Command {
 
 			cmd.SilenceUsage = true
 
-			profile := viper.GetString("profile")
-			homeDir := viper.GetString("home-directory")
-
-			creds, _, err := credentials.GetSSOCredentials(profile, homeDir)
-
+			creds, err := cache.GetCredentials(cmd)
 			if err != nil {
 				return err
 			}
 
-			fmt.Printf("export AWS_ACCESS_KEY_ID=%s\n", *creds.RoleCredentials.AccessKeyId)
-			fmt.Printf("export AWS_SECRET_ACCESS_KEY=%s\n", *creds.RoleCredentials.SecretAccessKey)
-			fmt.Printf("export AWS_SESSION_TOKEN=%s\n", *creds.RoleCredentials.SessionToken)
+			fmt.Printf("export AWS_ACCESS_KEY_ID=%s\n", creds.AwsAccessKeyID)
+			fmt.Printf("export AWS_SECRET_ACCESS_KEY=%s\n", creds.AwsSecretAccessKey)
+			fmt.Printf("export AWS_SESSION_TOKEN=%s\n", creds.SessionToken)
 
 			return nil
 		},
