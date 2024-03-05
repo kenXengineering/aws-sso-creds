@@ -60,11 +60,7 @@ func GetCachePath() string {
 	if err != nil {
 		panic("Cannot find home directory, fatal error")
 	}
-	configPath := homeDir + "/.config"
-	if configPath[:len(configPath)-1] != "/" {
-		configPath += "/"
-	}
-	return configPath + "aws-sso-creds"
+	return homeDir + "/.config/aws-sso-creds"
 }
 
 func GetCache(profile string) (*config.JSON, error) {
