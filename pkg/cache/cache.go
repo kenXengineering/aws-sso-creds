@@ -69,9 +69,9 @@ func GetCache(profile string) (*config.JSON, error) {
 		if err != nil {
 			return &config.JSON{}, err
 		}
-		jsonParser := json.NewDecoder(cacheFile)
+		jsonDecoder := json.NewDecoder(cacheFile)
 		data := &config.JSON{}
-		if err := jsonParser.Decode(&data); err != nil {
+		if err := jsonDecoder.Decode(&data); err != nil {
 			return &config.JSON{}, err
 		}
 		return data, nil
