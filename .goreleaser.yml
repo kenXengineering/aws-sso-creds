@@ -28,24 +28,24 @@ release:
   prerelease: auto
 brews:
   - name: aws-sso-creds
-    tap:
-      owner: jaxxstorm
+    repository:
+      owner: kenXengineering
       name: homebrew-tap
     commit_author:
       name: GitHub Actions
-      email: bot@leebriggs.co.uk
+      email: ken@kenxengineering.com
     folder: Formula
-    homepage: "https://leebriggs.co.uk"
+    homepage: "https://google.com"
     description: "Helper utility to get temporary credentials from AWS SSO."
-scoop:
-  url_template: "http://github.com/jaxxstorm/aws-sso-creds/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
-  bucket:
-    owner: jaxxstorm
-    name: scoop-bucket
-    branch: main
-  commit_author:
-    name: bot
-    email: bot@leebriggs.co.uk
-  commit_msg_template: "Scoop update for {{ .ProjectName }} version {{ .Tag }}"
-  homepage: "https://leebriggs.co.uk/"
-  description: "Helper utility to get temporary credentials from AWS SSO."
+scoops:
+  - url_template: "http://github.com/jaxxstorm/aws-sso-creds/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    repository:
+      owner: kenXengineering
+      name: scoop-bucket
+      branch: main
+    commit_author:
+      name: KenX
+      email: ken@kenxengineering.com
+    commit_msg_template: "Scoop update for {{ .ProjectName }} version {{ .Tag }}"
+    homepage: "https://google.com/"
+    description: "Helper utility to get temporary credentials from AWS SSO."
