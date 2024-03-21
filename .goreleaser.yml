@@ -12,7 +12,7 @@ builds:
   goarch:
     - amd64
     - arm64
-  ldflags: -X github.com/jaxxstorm/aws-sso-creds/pkg/version.Version={{.Version}}
+  ldflags: -X github.com/kenXengineering/aws-sso-creds/pkg/version.Version={{.Version}}
   binary: aws-sso-creds
   main: ./cmd/aws-sso-creds/main.go
 archives:
@@ -38,7 +38,7 @@ brews:
     homepage: "https://google.com"
     description: "Helper utility to get temporary credentials from AWS SSO."
 scoops:
-  - url_template: "http://github.com/jaxxstorm/aws-sso-creds/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+  - url_template: "http://github.com/kenXengineering/aws-sso-creds/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     repository:
       owner: kenXengineering
       name: scoop-bucket

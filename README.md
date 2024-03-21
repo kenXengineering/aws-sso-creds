@@ -110,12 +110,15 @@ If you're on os x make sure to then run `xattr -d com.apple.quarantine /path/to/
 A tap is provided to install via [homebrew](homebrew.sh):
 
 ```bash
-brew tap jaxxstorm/tap
+brew tap kenXengineering/tap
 brew install aws-sso-creds
 ```
 
-## Nix
+## Scoop
 
-nixpkgs includes [a recipe](https://github.com/NixOS/nixpkgs/blob/master/pkgs/tools/admin/aws-sso-creds/default.nix) for `aws-sso-creds`.
-- If [flakes](https://nixos.wiki/wiki/Flakes) are enabled: `nix profile install nixpkgs#aws-sso-creds`
-- Otherwise: `nix-env --install --attr aws-sso-creds`
+A bucket is provided to install via [Scoop](scoop.sh):
+
+```cmd
+scoop bucket add kenx https://github.com/kenXengineering/scoop-bucket.git
+scoop install kenx/aws-sso-creds
+```
