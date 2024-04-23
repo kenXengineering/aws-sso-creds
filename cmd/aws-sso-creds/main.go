@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/exportcmd"
 	"os"
 
 	"github.com/spf13/viper"
@@ -31,6 +32,7 @@ func configureCLI() *cobra.Command {
 	rootCommand.AddCommand(version.Command())
 	rootCommand.AddCommand(export.Command())
 	rootCommand.AddCommand(exportps.Command())
+	rootCommand.AddCommand(exportcmd.Command())
 	rootCommand.AddCommand(list.Command())
 	rootCommand.AddCommand(helper.Command())
 
