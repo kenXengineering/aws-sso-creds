@@ -2,14 +2,15 @@ package cache
 
 import (
 	"encoding/json"
+	"os"
+	"time"
+
 	"github.com/aws/aws-sdk-go-v2/service/sso"
-	"github.com/jaxxstorm/aws-sso-creds/pkg/config"
-	"github.com/jaxxstorm/aws-sso-creds/pkg/credentials"
+	"github.com/kenxengineering/aws-sso-creds/pkg/config"
+	"github.com/kenxengineering/aws-sso-creds/pkg/credentials"
 	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"os"
-	"time"
 )
 
 func GetCredentials(cmd *cobra.Command) (*config.JSON, error) {

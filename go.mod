@@ -1,15 +1,13 @@
-module github.com/jaxxstorm/aws-sso-creds
+module github.com/kenxengineering/aws-sso-creds
 
-go 1.21
+go 1.22
 
 require (
-	github.com/aws/aws-sdk-go v1.50.10
 	github.com/aws/aws-sdk-go-v2 v1.26.0
 	github.com/aws/aws-sdk-go-v2/config v1.27.9
 	github.com/aws/aws-sdk-go-v2/service/sso v1.20.3
 	github.com/bigkevmcd/go-configparser v0.0.0-20230427073640-c6b631f70126
 	github.com/go-git/go-git/v5 v5.11.0
-	github.com/liggitt/tabwriter v0.0.0-20181228230101-89fcab3d43de
 	github.com/logrusorgru/aurora v2.0.3+incompatible
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/pulumi/pulumictl v0.0.46
@@ -42,7 +40,6 @@ require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 // indirect
-	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/kevinburke/ssh_config v1.2.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect

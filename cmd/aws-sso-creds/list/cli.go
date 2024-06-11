@@ -1,8 +1,8 @@
 package list
 
 import (
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/list/accounts"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/list/roles"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/list/accounts"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/list/roles"
 	"github.com/spf13/cobra"
 )
 

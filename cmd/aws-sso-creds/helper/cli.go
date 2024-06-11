@@ -3,9 +3,10 @@ package helper
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/jaxxstorm/aws-sso-creds/pkg/cache"
-	"github.com/spf13/cobra"
 	"time"
+
+	"github.com/kenxengineering/aws-sso-creds/pkg/cache"
+	"github.com/spf13/cobra"
 )
 
 type CredentialsProcessOutput struct {

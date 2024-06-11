@@ -2,7 +2,8 @@ package exportps
 
 import (
 	"fmt"
-	"github.com/jaxxstorm/aws-sso-creds/pkg/cache"
+
+	"github.com/kenxengineering/aws-sso-creds/pkg/cache"
 
 	"github.com/spf13/cobra"
 )

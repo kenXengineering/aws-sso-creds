@@ -1,18 +1,19 @@
 package main
 
 import (
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/exportcmd"
 	"os"
+
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/exportcmd"
 
 	"github.com/spf13/viper"
 
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/export"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/exportps"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/get"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/helper"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/list"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/set"
-	"github.com/jaxxstorm/aws-sso-creds/cmd/aws-sso-creds/version"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/export"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/exportps"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/get"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/helper"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/list"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/set"
+	"github.com/kenxengineering/aws-sso-creds/cmd/aws-sso-creds/version"
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
 )

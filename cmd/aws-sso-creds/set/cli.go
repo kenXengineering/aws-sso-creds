@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/jaxxstorm/aws-sso-creds/pkg/credentials"
+	"github.com/kenxengineering/aws-sso-creds/pkg/credentials"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
